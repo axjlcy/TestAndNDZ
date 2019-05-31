@@ -1,5 +1,5 @@
 package com.wcy.hongkong.entity;
-
+//xxxx
 public class User {
     private Integer uId;
 
