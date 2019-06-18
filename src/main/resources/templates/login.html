@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
     <head>
+        <!-- Required meta tags -->
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
         <link href="/webjars/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="/webjars/jquery/3.4.1/jquery.js"></script>
+        <script src="/webjars/popper.js/1.14.3/umd/popper.js"></script>
         <script src="/webjars/bootstrap/4.3.1/js/bootstrap.js"></script>
+        <!--funtion-->
+        <script>
+            function register() {
+                //跳转到注册界面register.html进行注册
+                window.open("register.html", "_blank");  //_self,_parent,_top,_blank
+            }
+
+            function login() {
+                //登录逻辑
+                window.open("index.html", "_blank");
+            }
+        </script>
+        <!--other-->
+        <link th:href="@{/css/signin.css}" rel="stylesheet" type="text/css">
+
+        <title>登录</title>
 
     </head>
-    <body>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
+    <body class="text-center">
+        <form class="form-signin">
+            <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72"
+                 height="72">
+            <h1 class="h3 mb-3 font-weight-normal text-center">请登录</h1>
+            <label for="inputEmail" class="sr-only">账号</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="账号" required autofocus>
+            <label for="inputPassword" class="sr-only">密码</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+            <div class="addFunction text-left">
+                <label style="display: block">
+                    <input type="checkbox" value="remember-me"> 记住用户
+                </label>
+                <a href="#" style="text-decoration:underline;display: block">忘记密码</a>
+            </div>
+            <div class="addFunction">
+                <button class="btn btn-sm btn-primary" type="submit">登录</button>
+                <button class="btn btn-sm btn-primary" type="submit">注册</button>
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2019-2029</p>
+
+        </form>
+
     </body>
 </html>
