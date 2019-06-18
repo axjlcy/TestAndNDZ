@@ -16,11 +16,6 @@
                 //跳转到注册界面register.html进行注册
                 window.open("register.html", "_blank");  //_self,_parent,_top,_blank
             }
-
-            function login() {
-                //登录逻辑
-                window.open("index.html", "_blank");
-            }
         </script>
         <!--other-->
         <link th:href="@{/css/signin.css}" rel="stylesheet" type="text/css">
@@ -33,10 +28,10 @@
             <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72"
                  height="72">
             <h1 class="h3 mb-3 font-weight-normal text-center">请登录</h1>
-            <label for="inputEmail" class="sr-only">账号</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="账号" required autofocus>
-            <label for="inputPassword" class="sr-only">密码</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+            <label for="userName" class="sr-only">账号</label>
+            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号" required autofocus>
+            <label for="passWord" class="sr-only">密码</label>
+            <input type="password" id="passWord" class="form-control" onkeyup="verifyBlank(this)" placeholder="密码" required>
             <div class="addFunction text-left">
                 <label style="display: block">
                     <input type="checkbox" value="remember-me"> 记住用户
@@ -44,12 +39,12 @@
                 <a href="#" style="text-decoration:underline;display: block">忘记密码</a>
             </div>
             <div class="addFunction">
-                <button class="btn btn-sm btn-primary" type="submit">登录</button>
+                <button class="btn btn-sm btn-primary" id="btn-login" onclick="login()">登录</button>
                 <button class="btn btn-sm btn-primary" type="submit">注册</button>
             </div>
             <p class="mt-5 mb-3 text-muted">&copy; 2019-2029</p>
 
         </form>
-
+        <script th:src="@{/js/login.js}"></script>
     </body>
 </html>
