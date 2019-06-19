@@ -1,4 +1,4 @@
-package com.wcy.hongkong.controller;
+package com.wcy.hongkong.configEntity;
 
 /**
  * @author ndzzz
@@ -29,9 +29,9 @@ public class loginBean {
 
     @Override
     public String toString() {
-        return "loginBean{" +
-                "userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
-                '}';
+        return "{" +
+                "\"userName\":\"" + userName + "\"" +
+                ",\"passWord\":\"" + passWord + "\"" +
+                "}";
     }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link href="/webjars/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/webjars/jquery/3.4.1/jquery.js"></script>
+        <script src="/webjars/popper.js/1.14.3/umd/popper.js"></script>
+        <script src="/webjars/bootstrap/4.3.1/js/bootstrap.js"></script>
+        <!--funtion-->
+        <script>
+
+        </script>
+        <!--other-->
+        <title>注册</title>
+        <link rel="stylesheet" href="css/signin.css">
+
+    </head>
+    <body class="text-center">
+        <form class="form-signin">
+            <div class="loginHeader">
+                <h2 class="font-weight-normal ml-1">注册信息</h2>
+                <img class="mr-1" src="image/register_logo.png" alt="" width="53" height="72">
+            </div>
+            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号" required
+                   autofocus>
+            <input type="password" id="passWord" class="form-control" onkeyup="verifyBlank(this)" placeholder="密码"
+                   required>
+            <div class="text-center">
+                <button class="btn btn-sm btn-primary">注册</button>
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2019-2029</p>
+
+        </form>
+    </body>
+</html>

@@ -18,20 +18,20 @@
             }
         </script>
         <!--other-->
-        <link th:href="@{/css/signin.css}" rel="stylesheet" type="text/css">
-
         <title>登录</title>
+        <link rel="stylesheet" href="css/signin.css">
+        <script src="js/login.js"></script>
 
     </head>
     <body class="text-center">
         <form class="form-signin">
-            <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72"
-                 height="72">
-            <h1 class="h3 mb-3 font-weight-normal text-center">请登录</h1>
-            <label for="userName" class="sr-only">账号</label>
-            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号" required autofocus>
-            <label for="passWord" class="sr-only">密码</label>
-            <input type="password" id="passWord" class="form-control" onkeyup="verifyBlank(this)" placeholder="密码" required>
+            <div class="loginHeader">
+                <h2 class="font-weight-normal ml-1">登录</h2>
+                <img class="mr-1" src="image/login_logo.png" alt="" width="72" height="72">
+            </div>
+            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号"
+                   autofocus>
+            <input type="password" id="passWord" class="form-control" onkeyup="verifyBlank(this)" placeholder="密码">
             <div class="addFunction text-left">
                 <label style="display: block">
                     <input type="checkbox" value="remember-me"> 记住用户
@@ -40,11 +40,10 @@
             </div>
             <div class="addFunction">
                 <button class="btn btn-sm btn-primary" id="btn-login" onclick="login()">登录</button>
-                <button class="btn btn-sm btn-primary" type="submit">注册</button>
+                <button class="btn btn-sm btn-primary" onclick="register()">注册</button>
             </div>
             <p class="mt-5 mb-3 text-muted">&copy; 2019-2029</p>
 
         </form>
-        <script th:src="@{/js/login.js}"></script>
     </body>
 </html>
