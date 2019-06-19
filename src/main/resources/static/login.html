@@ -11,8 +11,8 @@
         <script src="/webjars/popper.js/1.14.3/umd/popper.js"></script>
         <script src="/webjars/bootstrap/4.3.1/js/bootstrap.js"></script>
         <!--funtion-->
-        <script>
-            function register() {
+        <script type="text/javascript">
+            function toRegister() {
                 //跳转到注册界面register.html进行注册
                 window.open("register.html", "_blank");  //_self,_parent,_top,_blank
             }
@@ -29,8 +29,7 @@
                 <h2 class="font-weight-normal ml-1">登录</h2>
                 <img class="mr-1" src="image/login_logo.png" alt="" width="72" height="72">
             </div>
-            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号"
-                   autofocus>
+            <input type="text" id="userName" class="form-control" onkeyup="verifyBlank(this)" placeholder="账号" autofocus>
             <input type="password" id="passWord" class="form-control" onkeyup="verifyBlank(this)" placeholder="密码">
             <div class="addFunction text-left">
                 <label style="display: block">
@@ -39,8 +38,8 @@
                 <a href="#" style="text-decoration:underline;display: block">忘记密码</a>
             </div>
             <div class="addFunction">
-                <button class="btn btn-sm btn-primary" id="btn-login" onclick="login()">登录</button>
-                <button class="btn btn-sm btn-primary" onclick="register()">注册</button>
+                <button class="btn btn-sm btn-primary" onclick="login()" id="btn-login">登录</button>
+                <button class="btn btn-sm btn-primary" onclick="toRegister()">注册</button>
             </div>
             <p class="mt-5 mb-3 text-muted">&copy; 2019-2029</p>
 

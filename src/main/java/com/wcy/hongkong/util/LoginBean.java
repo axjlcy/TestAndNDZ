@@ -1,11 +1,12 @@
-package com.wcy.hongkong.configEntity;
+package com.wcy.hongkong.util;
 
 /**
  * @author ndzzz
  * @date 10:56 2019/6/18
  * @Description:
  */
-public class loginBean {
+public class LoginBean
+{
 
     private String userName;
 

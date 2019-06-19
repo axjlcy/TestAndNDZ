@@ -11,20 +11,20 @@ import java.util.Calendar;
  */
 public class BaseRespEntity<T> implements Serializable {
 
-    private String resp_code;
-    private String resp_desc;
-    private String resp_time;
-    private T resp_info;
+    private String resp_code;//状态码
+    private String resp_desc;//状态描述
+    private String resp_time;//时间戳
+    private T resp_info;//判断体
 
     public BaseRespEntity () {
-        this.resp_code = ResponseEnum.SUCCESS_CODE.code;
-        this.resp_desc = ResponseEnum.SUCCESS_CODE.msg;
+        this.resp_code = ResponseEnum.INIT_CODE.code;
+        this.resp_desc = ResponseEnum.INIT_CODE.msg;
         this.resp_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
     }
 
     public BaseRespEntity (T data) {
-        this.resp_code = ResponseEnum.SUCCESS_CODE.code;
-        this.resp_desc = ResponseEnum.SUCCESS_CODE.msg;
+        this.resp_code = ResponseEnum.INIT_CODE.code;
+        this.resp_desc = ResponseEnum.INIT_CODE.msg;
         this.resp_info = data;
         this.resp_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
     }

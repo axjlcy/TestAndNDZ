@@ -7,8 +7,14 @@ package com.wcy.hongkong.util;
  */
 public enum  ResponseEnum {
 
-    SUCCESS_CODE("0000","成功"),
-    FAIL_CODE("9999","失败");
+    INIT_CODE("0000","初态"),
+    LOGIN_SUCCESS_CODE("1111","登录成功"),
+    REGISTER_SUCCESS_CODE("1112","注册成功"),
+    USER_IS_NULL_CODE("8886","账号为空"),
+    USER_IS_EXISTENT_CODE("8887","账号已存在"),
+    USER_NON_EXISTENT_CODE("8888","账号不存在"),
+    PSW_IS_NULL_CODE("9998","密码为空"),
+    PSW_ERROR_CODE("9999","密码错误");
     public String code;
     public String msg;
 
